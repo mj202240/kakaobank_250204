@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>loan</title>
+  <!-- lodash -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+  <!-- 제이쿼리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+<h1>스크롤을 내려보세요</h1>
+
+  <div class="con-min-width loan_box active-on-visible" data-active-on-visible-diff-y="-200" data-active-on-visible-delay="2000">
+  <div class="sky">
+   <div class="blue"></div>
+   <div class="moon">
+    <div class="base"></div>
+    <div class="shadow"></div>
+   </div>
+   <div class="stars"></div>
+  </div>
+  
+  <div class="con">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus cupiditate illo asperiores maxime nesciunt iure mollitia fuga ab vitae tempora aliquam magnam molestias delectus, maiores ipsa, error eveniet cum voluptas?
+  </div>
+</div>
+
+
+  <style>
+    /* 노멀라이즈 */
+  body,ul,li{
+    margin:0;
+    padding: 0;
+    list-style: none;
+  }
+  a{
+    color:inherit;
+    text-decoration: none;
+  }
+  /* 라이브러리 */
+  .border-red{
+    border:5px solid red;
+  }
+  .border-blue{
+    border:5px solid blue;
+  }
+  .border-green{
+    border:5px solid green;
+  }
+  .border-gold{
+    border:5px solid gold;
+  }
+  .flex{
+    display: flex;
+  }
+  .flex-jc-c{
+    justify-content: center;
+  }
+.flex-ai-c{
+  align-items: center;
+}
+.flex-as-c{
+  align-self: center;
+}
+.flex-grow-1{
+  flex-grow: 1;
+}
+.block{
+  display: block;
+}
+.height-100p{
+  height: 100%;
+}
+.con{
+
+}
+.img-box>img{
+  width:100%;
+  display: block;
+}
+.relative{
+  position: relative;
+}
+/* 커스텀 */
+.con_min_width{
+  min-width: 1080px;
+}
+.con{
+  width:1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ico{
+  background-color:white;
+  width:24px;
+  height:24px;
+  display:inline-block;
+  background-image:url(https://www.kakaobank.com/static/images/web/img_kabang_220615.png)
+}
+
+/* 대출박스 시작 */
+.loan_box{
+  background-color: #333b58;
+  position: relative;
+  height: 500px;
+  margin-top: 1000px;
+}
+
+.loan_box > .con {
+position: relative;
+}
+
+.loan_box > .sky{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+}
+
+.loan_box > .sky > .blue {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  background-color: #599cde;
+  transition: height .85s;
+}
+
+.loan_box.active > .sky > .blue{
+  height: 0;
+}
+/* 대출박스 끝 */
+/* MOON */
+.loan_box > .sky > .moon {
+ width: 112px;
+ height: 112px;
+ position: absolute;
+ top: 170px;
+ left: calc(50% + 500px);
+ overflow: hidden;
+}
+
+.loan_box > .sky > .moon > .base {
+ width: 110px;
+ height: 110px;
+ background-color: #ffdc00;
+ border-radius: 50%;
+ transition: background-color .85s;
+}
+
+.loan_box.active > .sky > .moon > .base {
+ background-color: #fff;
+}
+
+.loan_box > .sky > .moon > .shadow {
+ width: 100%;
+ height: 100%;
+ background-color: #333b58;
+ position: absolute;
+ top: -100%;
+ left: -100%;
+ border-radius: 50%;
+ transition: top .85s .2s, left .85s .2s;
+}
+.loan_box.active > .sky > .moon > .shadow {
+ top: -23%;
+ left: -23%;
+}
+
+  </style>
+
+<script>
+/* 발견되면 활성화시키는 라이브러리 시작 */
+function ActiveOnVisible__init() {
+  $('.active-on-visible').each(function(index, node) {
+    var $node = $(node);
+
+    var onFuncName = $node.attr('data-active-on-visible-on-func-name');
+    var offFuncName = $node.attr('data-active-on-visible-off-func-name');
+
+    $node.data('data-active-on-visible-on-func-name', onFuncName);
+    $node.data('data-active-on-visible-off-func-name', offFuncName);
+  });
+
+  $(window).resize(_.debounce(ActiveOnVisible__initOffset, 500));
+  ActiveOnVisible__initOffset();
+
+  $(window).scroll(_.debounce(ActiveOnVisible__checkAndActive, 50));
+  ActiveOnVisible__checkAndActive();
+}
+
+function ActiveOnVisible__initOffset() {
+  var windowHeight = $(window).height();
+
+  $('.active-on-visible:not(.actived)').each(function(index, node) {
+    var $node = $(node);
+
+    var offsetTop = $node.offset().top;
+
+    var matrix = $node.css('transform').replace(/[^0-9\-.,]/g, '').split(',')
+    var translateX = matrix[12] || matrix[4];
+    var translateY = matrix[13] || matrix[5];
+
+    if ( translateY ) {
+      offsetTop -= translateY;
+    }
+
+    $node.attr('data-active-on-visible-offsetTop', offsetTop);
+    $node.data('data-active-on-visible-offsetTop', offsetTop);
+
+    if ( !$node.attr('data-active-on-visible-diff-y') ) {
+      $node.attr('data-active-on-visible-diff-y', '0');
+    }
+
+    if ( !$node.attr('data-active-on-visible-delay') ) {
+      $node.attr('data-active-on-visible-delay', '0');
+    }
+
+    var diffY = $node.attr('data-active-on-visible-diff-y');
+    var delay = $node.attr('data-active-on-visible-delay');
+
+    if ( diffY.substr(-2, 2) == 'vh' ) {
+      diffY = parseInt(diffY);
+
+      diffY = windowHeight * (diffY / 100);
+    }
+    else if ( diffY.substr(-1, 1) == '%' ) {
+      diffY = parseInt(diffY);
+
+      diffY = $node.height() * (diffY / 100);
+    }
+    else {
+      diffY = parseInt(diffY);
+    }
+
+    $node.attr('data-active-on-visible-diff-y-real', diffY);
+    $node.data('data-active-on-visible-diff-y', diffY);
+    $node.data('data-active-on-visible-delay', delay);
+  });
+
+  ActiveOnVisible__checkAndActive();
+}
+
+function ActiveOnVisible__checkAndActive() {
+  $('.active-on-visible:not(.actived)').each(function(index, node) {
+    var $node = $(node);
+
+    var offsetTop = $node.data('data-active-on-visible-offsetTop') * 1;
+    var diffY = parseInt($node.data('data-active-on-visible-diff-y'));
+    var delay = parseInt($node.data('data-active-on-visible-delay'));
+
+    var onFuncName = $node.data('data-active-on-visible-on-func-name');
+    var offFuncName = $node.data('data-active-on-visible-off-func-name');
+
+    var scrollTop = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var nodeHeight = $node.height();
+
+    if ( scrollTop + windowHeight + diffY > offsetTop ) {
+      setTimeout(function() {
+        if ( $node.hasClass('active') == false ) {
+          $node.addClass('active');
+
+          if ( $node.hasClass('can-active-once') ) {
+            $node.addClass('actived');
+          }
+
+          if ( window[onFuncName] ) {
+            window[onFuncName]($node);
+          }
+        }
+      }, delay);
+    }
+    else {
+      if ( $node.hasClass('active') ) {
+        $node.removeClass('active');
+
+        if ( window[offFuncName] ) {
+          window[offFuncName]($node);
+        }
+      }
+    }
+  });
+}
+
+$(function() {
+  ActiveOnVisible__init();
+})
+/* 발견되면 활성화시키는 라이브러리 끝 */
+</script>
+</body>
+</html>
