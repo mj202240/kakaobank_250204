@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>itskill</title>
+  <!-- lodash -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+  <!-- 제이쿼리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="itskill_box">
+  <div class="con">
+    <h3>IT 기술로 카카오뱅크를
+      <br>
+      만들어 갑니다.
+    </h3>
+
+    <div class="divider"></div>
+    <div class="txt_box">
+      <div class="bg_divider"></div>
+      <div class="img-box">
+        <img src="/imges/home_it.png" alt="">
+      </div>
+      <ul class="flex">
+        <li>
+          <strong>간결하고, 유려하게</strong>
+          <p>
+            작은 모바일 화면에 적합하도록
+            <br>
+            복잡함을 덜어낸
+            <br>
+            유려하고 친화적인 UX
+          </p>
+        </li>
+        <li>
+          <strong>간편한 인증, 철저한 보안</strong>
+          <p>
+            지문, 비밀번호로 간편한 인증
+            <br>
+            IT 기술의 강력한 보안 검증과
+            <br>
+            데이터 암호화
+          </p>
+        </li>
+        <li class="flex-grow-1">
+          <strong></strong>
+          <p></p>
+        </li>
+        <li>
+          <strong>Mobile First, One App</strong>
+          <p>
+            모바일에서 뱅킹이 더 쉽고 편리하게
+            <br>
+            여러 앱을 설치할 필요 없이
+            <br>
+            하나의 앱으로
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <style>
+    /* 노멀라이즈 */
+  body,ul,li,h3{
+    margin:0;
+    padding: 0;
+    list-style: none;
+  }
+  a{
+    color:inherit;
+    text-decoration: none;
+  }
+  /* 라이브러리 */
+  .border-red{
+    border:5px solid red;
+  }
+  .border-blue{
+    border:5px solid blue;
+  }
+  .border-green{
+    border:5px solid green;
+  }
+  .border-gold{
+    border:5px solid gold;
+  }
+  .flex{
+    display: flex;
+  }
+  .flex-jc-c{
+    justify-content: center;
+  }
+.flex-ai-c{
+  align-items: center;
+}
+.flex-as-c{
+  align-self: center;
+}
+.flex-grow-1{
+  flex-grow: 1;
+}
+.block{
+  display: block;
+}
+.height-100p{
+  height: 100%;
+}
+.con{
+
+}
+.img-box>img{
+  width:100%;
+  display: block;
+}
+.relative{
+  position: relative;
+}
+/* 커스텀 */
+.con_min_width{
+  min-width: 1080px;
+}
+.con{
+  width:1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ico{
+  background-color:white;
+  width:24px;
+  height:24px;
+  display:inline-block;
+}
+/* IT 박스 시작 */
+.itskill_box{
+  padding-top: 160px;
+  background-color: #f9f9f9;
+  padding-bottom: 230px;
+}
+
+.itskill_box > .con > h3{
+  font-size: 40px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.itskill_box >.con > .divider{
+  width: 100px;
+  height: 2px;
+  background-color: #000;
+  margin: 50px auto 140px;
+}
+
+.itskill_box > .con > .txt_box > .img-box{
+  position: relative;
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.itskill_box > .con > .txt_box > .bg_divider {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 0;
+  background-color: #eee;
+  transform: translateY(135px);
+}
+
+.txt_box > ul {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.txt_box > ul > li {
+  text-align: center;
+  width: 255px;
+  height: 210px;
+}
+
+.txt_box > ul > li > strong{
+  margin: 45px 0 17px;
+  font-size: 18px;
+  display: block;
+}
+
+.txt_box > ul > li > p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #666;
+}
+/* IT 박스 끝 */
+  </style>
+
+
+</body>
+</html>
