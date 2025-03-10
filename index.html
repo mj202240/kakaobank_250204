@@ -1,14 +1,1594 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div>안녕</div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오뱅크 모작</title>
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- 제이쿼리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- lodash -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+    <!-- 슬릭 슬라이더 불러오기 -->
+    <!-- 무조건 제이쿼리 밑에다 놔야함 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  </head>
 
+<body>
+  <header class="top_bar con_min_width">
+    <div class="con flex height-100p">
+      <div class="logo_wrap flex">
+    <a href="#" class="flex">
+      <img src="../imges/logo_black.svg" alt="">
+    </a>
+  </div>
+  <div class="flex-grow-1"></div>
+
+  <div class="menu_box">
+    <ul class="flex height-100p">
+      <li>
+        <a href="#" class="flex flex-ai-c height-100p">은행소개</a>
+        <div class=" con_min_width">
+          <div class="con menu_box-sec_menu">
+        <ul class="flex">
+          <li>
+            <a href="#">카카오뱅크</a>
+            <ul>
+              <li><a href="#" class="block">브랜드</a></li>
+              <li><a href="#" class="block">주주사 소개</a></li>
+              <li><a href="#" class="block">오시는 길</a></li>
+              <li><a href="#" class="block">제휴문의</a></li>
+              <li><a href="#" class="block" target="_blank">금융기술연구소 </a></li>
+              <li><a href="#" class="block" target="_blank">카카오뱅크 인증서</a></li>
+          </ul>
+        </li>
+          <li>
+            <a href="#">윤리경영</a>
+            <ul>
+              <li><a href="#" class="block">윤리강령</a></li>
+              <li><a href="#" class="block">임직원행동기준</a></li>
+          </ul>
+        </li>
+          <li>
+            <a href="#">새소식</a>
+            <ul>
+              <li><a href="#" class="block">공지사항</a></li>
+              <li><a href="#" class="block">입찰공고</a></li>
+          </ul>
+          </li>
+          <li>
+            <a href="#">인재영업</a>
+
+          </li>
+        </ul>
+      </div>
+      </div>
+      </li>
+      <li>
+        <a href="#"class="flex flex-ai-c height-100p">IR 투자정보</a>
+        <div class="con_min_width">
+          <div class="menu_box-sec_menu con">
+        <ul class="flex">
+          <li>
+            <a href="#">공시정보</a>
+            <ul>
+              <li><a href="#" class="block">전자공시</a></li>
+              <li><a href="#" class="block">경영공시</a></li>
+              <li><a href="#" class="block">바젤공시</a></li>
+              <li><a href="#" class="block">지배구조공시</a></li>
+              <li><a href="#" class="block">기타공시</a></li>
+              <li><a href="#" class="block">공시규정</a></li>
+          </ul>
+        </li>
+          <li>
+            <a href="#">경영정보</a>
+            <ul>
+              <li><a href="#" class="block">이사회</a></li>
+              <li><a href="#" class="block">이사회 구성 가이드라인</a></li>
+              <li><a href="#" class="block">지속가능경영</a></li>
+          </ul>
+          </li>
+          <li>
+            <a href="#">재무정보</a>
+            <ul>
+              <li><a href="#" class="block">재무제표</a></li>
+              <li><a href="#" class="block">감사보고서</a></li>
+              <li><a href="#" class="block">영업보고서</a></li>
+              <li><a href="#" class="block">신용등급</a></li>
+          </ul>
+        </li>
+          <li>
+            <a href="#">IR자료실</a>
+            <ul>
+              <li><a href="#" class="block">실적발표</a></li>
+              <li><a href="#" class="block">주가정보</a></li>
+              <li><a href="#" class="block">배당현황</a></li>
+              <li><a href="#" class="block">기업가치제고계획</a></li>
+          </ul>
+          </li>
+          <li>
+            <a href="#">IR 일정</a>
+            <ul>
+              <li><a href="#" class="block">IR행사</a></li>
+              <li><a href="#" class="block">IR미팅예약</a></li>
+              <li><a href="#" class="block">주주총회</a></li>
+          </ul>
+          </li>
+          <li><a href="#">공고</a></li>
+        </ul>
+    </div>
+    </div>
+    </li>
+      <li>
+        <a href="#"class="flex flex-ai-c height-100p">상품안내</a>
+        <div class="con_min_width">
+          <div class="menu_box-sec_menu con">
+        <ul class="flex">
+          <li>
+            <a href="#">통장/저축</a>
+            <ul>
+              <li><a href="#" class="block">입출금통장</a></li>
+              <li><a href="#" class="block">모임통장</a></li>
+              <li><a href="#" class="block">기록통장</a></li>
+              <li><a href="#" class="block">세이프박스</a></li>
+              <li><a href="#" class="block">저금통</a></li>
+              <li><a href="#" class="block">정기예금</a></li>
+              <li><a href="#" class="block">자유적금</a></li>
+              <li><a href="#" class="block">26주적금</a></li>
+              <li><a href="#" class="block">한달적금</a></li>
+          </ul>
+        </li>
+          <li>
+            <a href="#">대출</a>
+            <ul>
+              <li><a href="#" class="block">비상금대출</a></li>
+              <li><a href="#" class="block">마이너스 통장대출</a></li>
+              <li><a href="#" class="block">신용대출</a></li>
+              <li><a href="#" class="block">중고차 구매대출</a></li>
+              <li><a href="#" class="block">전월세보증금 대출</a></li>
+              <li><a href="#" class="block">전월세보증금 대출 갈아타기</a></li>
+              <li><a href="#" class="block">주택담보대출</a></li>
+              <li><a href="#" class="block">주택담보대출 갈아타기</a></li>
+              <li><a href="#" class="block">신용대출 비교하기</a></li>
+              <li><a href="#" class="block">신용대출 갈아타기</a></li>
+              <li><a href="#" class="block">내 신용정보</a></li>
+          </ul>
+          </li>
+          <li>
+            <a href="#">투자/외환</a>
+            <ul>
+                                        <li><a href="#" class="block">펀드</a></li>
+                                        <li><a href="#" class="block">증권사 주식계좌</a></li>
+                                        <li><a href="#" class="block">달러박스</a></li>
+                                        <li><a href="#" class="block">해외송금 보내기</a></li>
+                                        <li><a href="#" class="block">해외송금 받기</a></li>
+                                    </ul>
+          </li>
+          <li>
+            <a href="#">카드</a>
+            <ul>
+              <li><a href="#" class="block">프렌즈 체크카드</a></li>
+              <li><a href="#" class="block">모임 체크카드</a></li>
+              <li><a href="#" class="block">제휴 신용카드</a></li>
+              <li><a href="#" class="block">혜택 좋은 신용카드</a></li>
+          </ul>
+        </li>
+          <li>
+            <a href="#">사업자</a>
+            <ul>
+              <li><a href="#" class="block">개인사업자통장</a></li>
+              <li><a href="#" class="block">부가세박스</a></li>
+              <li><a href="#" class="block">개인사업자 신용대출</a></li>
+              <li><a href="#" class="block">개인사업자 보증서대출</a></li>
+              <li><a href="#" class="block">개인사업자 체크카드</a></li>
+              <li><a href="#" class="block">내 사업장 신용정보</a></li>
+              <li><a href="#" class="block">사업자 인증서</a></li>
+          </ul>
+          </li>
+          <li>
+            <a href="#">mini</a>
+            <ul>
+              <li><a href="#" class="block">카카오뱅크 mini</a></li>
+              <li><a href="#" class="block">mini카드</a></li>
+              <li><a href="#" class="block">mini 26일저금</a></li>
+          </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+        </li>
+      <li>
+        <a href="#"class="flex flex-ai-c height-100p">고객센터</a>
+        <div class="con_min_width">
+          <div class="menu_box-sec_menu con">
+        <ul class="flex">
+          <li>
+            <a href="#">이용안내</a>
+            <ul>
+              <li><a href="#" class="block">자주 묻는 질문</a></li>
+              <li><a href="#" class="block">이용시간 안내</a></li>
+              <li><a href="#" class="block">ATM 이용안내</a></li>
+              <li><a href="#" class="block">ATM 이용안내 (달러박스)</a></li>
+              <li><a href="#" class="block">금리안내</a></li>
+              <li><a href="#" class="block">금리인하요구권 안내</a></li>
+              <li><a href="#" class="block">수수료안내</a></li>
+              <li><a href="#" class="block">상담안내</a></li>
+              <li><a href="#" class="block">채무자보호안내</a></li>
+              <li><a href="#" class="block">채무조정안내</a></li>
+          </ul>
+          </li>
+          <li>
+            <a href="#">사용하기</a>
+            <ul>
+              <li><a href="#" class="block">고객의 소리</a></li>
+              <li><a href="#" class="block">1:1 문의</a></li>
+          </ul>
+          </li>
+          <li>
+            <a href="#">소비자보호</a>
+            <ul>
+              <li><a href="#" class="block">소비자보호체계</a></li>
+              <li><a href="#" class="block">소비자보호 우수사례</a></li>
+              <li><a href="#" class="block">전자민원</a></li>
+              <li><a href="#" class="block">소비자보호공시</a></li>
+              <li><a href="#" class="block">민원사무편람</a></li>
+              <li><a href="#" class="block">금융정보</a></li>
+              <li><a href="#" class="block">보안취약점 신고 안내</a></li>
+              <li><a href="#" class="block">판매대리·중개업자 증서</a></li>
+              <li><a href="#" class="block">비대면 금융사고 책임분담안내</a></li>
+          </ul>
+          </li>
+          <li>
+            <a href="#">금융사기대응</a>
+            <ul>
+              <li><a href="#" class="block">금융사기예방</a></li>
+              <li><a href="#" class="block">피해대처방법</a></li>
+              <li><a href="#" class="block">피해신고관련서식</a></li>
+              <li><a href="#" class="block">카카오뱅크 사칭제보</a></li>
+              <li><a href="#" class="block">불법도박 이용계좌 신고</a></li>
+          </ul>
+          </li>
+          <li>
+            <a href="#">증명서</a>
+            <ul>
+              <li><a href="#" class="block">나의 증명서 발급내역</a></li>
+              <li><a href="#" class="block">증명서 진위 확인</a></li>
+          </ul>
+          </li>
+          <li>
+            <a href="#">약관 ・ 서식</a>
+            <ul>
+              <li><a href="#" class="block">약관</a></li>
+              <li><a href="#" class="block">서식</a></li>
+              <li><a href="#" class="block">상품설명서</a></li>
+              <li><a href="#" class="block">상품공시</a></li>
+              <li><a href="#" class="block">펀드공시</a></li>
+          </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+        </li>
+    </ul>
   
-  <a href="sections/topbar.html">탑바</a>
+  </div>
+ <div class="dropdown flex-as-c">
+<button class="dropBtn">
+  <span>관련사이트</span>
+  <span class="ico"><i class="fa-solid fa-angle-up"></i></span>
+</button>
+<div class="dropdown_content">
+  <ul>
+    <li><a href="#"><span>카카오뱅크 AD</span></a></li>
+    <li><a href="#"><span>카카오뱅크 인증서</span></a></li>
+    <li><a href="#"><span>카카오뱅크 금융기술연구소</span></a></li>
+    <li><a href="#"><span>카카오뱅크 기술블로그</span></a></li>
+  </ul>
+</div>
+ </div>
+ <div>
+  <a href="#" class="global_logo flex flex-ai-c">
+    <span><img src="/imges/icon_eng_w.svg" alt=""></span>
+    <span><img src="/imges/icon_eng.svg" alt=""></span>
+  </a>
+ </div>
+ </div>
+ </header>
+ 
+ <section class="main_banner con_min_width">
+  <div class="bg"></div>
+  <div class="con relative">
+    <div class="con text_box">
+      <h3>이미 모두의 은행<br>지금은 카카오뱅크</h3>
+      <p class="tit_sub">
+        한 사람, 한 사람을 위해 시작한 은행이
+        <br>
+        더 많은 사람들이 찾는 모두의 은행이 되었습니다.
+      </p>
+      <p class="tit_sub2">
+        보내고, 받고, 모으고, 쓰는
+        <br>
+        당신의 모든 일이 바뀌고 있습니다.
+      </p>
+      <ul class="btns flex">
+        <li>
+          <a href="#">
+            <span class="ico ico-1"></span>
+            <span>Goolge play</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="ico ico-2"></span>
+            <span> App store</span>
+          </a>
+        </li>
+      </ul>
+    
+    </div>
+  </div>
+  <div class="con img-box"></div>
+  <div class="con img-box">
+    <img src="/imges/main-bg3.png" alt="">
+  </div>
+</section>
+
+
+  <section class="md_sec md_sec_1 con">
+    <div>
+      <div class="img-box"><img src="/imges/main-withdrawal.png" alt=""></div>
+    </div>
+    <div>
+      <div class="txt_box">
+        <h3>
+          모바일로 더 손쉬운
+          <br>
+          계좌개설, 간편한 이체</h3>
+          <p>
+            인증서, OTP 없이 계좌 개설이 간편합니다.
+          <br>
+          여러 건의 이체도 몇 번의 터치로 손쉽게 보낼 수 있습니다.
+        </p>
+        <div class="btn_box">
+          <a href="#">
+            카카오뱅크 입출금통장
+            <img src="/imges/home_arr.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="md_divider"></div> 
+  <section class="md_sec md_sec_2 con">
+    <div>
+      <div class="txt_box">
+        <h3>우대조건 없이
+          <br>
+          합리적인 예금과 적금
+        </h3>
+        <p>
+          기대했던 금리와 다르게 복잡한 우대조건에 실망한 적이 있었나요?
+          <br>
+카카오뱅크의 예금, 적금은 숨겨진 우대조건 없이 누구에게나 편리하고 합리적입니다.
+        </p>
+        <div class="btn_box">
+          <a href="#">
+            정기예금
+            <img src="/imges/home_arr.png" alt="">
+          </a>
+          <a href="#">
+            자유적금
+            <img src="/imges/home_arr.png" alt="">
+          </a>
+        </div>
+        <div class="img_box_1">
+          <img src="/imges/main-savings-money.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="img-box active-on-visible can-active-once" data-active-on-visible-diff-y="-200">
+        <img src="/imges/main-savings.png" alt="">
+      </div>
+    </div>
+  </section>
+  <div class="md_divider"></div> 
+  <section class="md_sec md_sec_3 con">
+    <div>
+      <div class="img-box"><img src="/imges/main-moim.png" alt=""></div>
+    </div>
+    <div>
+      <div class="txt_box">
+        <h3>
+          함께 쓰고 같이 보는
+          <br>
+          모임통장
+        </h3>
+          <p>
+            카카오톡 친구를 바로 모임통장으로 초대하고
+          <br>
+          친구들과 함께 잔액과 입출금 현황을 확인할 수 있습니다.
+          <br>
+          재미있는 메시지 카드로 회비 입금 요청도 해보세요.
+        </p>
+        <div class="btn_box">
+          <a href="#">
+            모임통장
+            <img src="/imges/home_arr.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="md_divider"></div> 
+  <section class="md_sec md_sec_4 con">
+    <div>
+      <div class="txt_box">
+        <h3>함께 도전해서
+          <br>
+          재미있는 26주적금
+        </h3>
+        <p>
+          26주동안 변화하는 재미에 빠져있는 사이
+          <br>
+          어느덧 만기 달성 경험을 맛보게 됩니다.
+        </p>
+        <div class="btn_box">
+          <a href="#">
+            26주 적금
+            <img src="/imges/home_arr.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="img-box">
+        <img src="/imges/main-26weeks.png" alt="">
+      </div>
+    </div>
+  </section>
+  <div class="md_divider"></div> 
+  <div class="con-min-width md_sec_5_wrap">
+  <section class="md_sec md_sec_5 con">
+    <div>
+      <div class="img-box active-on-visible can-active-once" data-active-on-visible-diff-y="-200">
+        <img src="/imges/main-foreignRemittance-new.png" alt=""></div>
+    </div>
+    <div>
+      <div class="txt_box">
+        <h3>
+          해외계좌송금과
+          <br>
+          WU빠른해외송금을
+          <br>
+          더 쉽고, 저렴하게
+        </h3>
+          <p>
+            해외계좌송금이 가능한 22개국을 포함하여
+          <br>
+          전세계 200여개국으로
+          <br>
+          WU빠른해외송금이 가능합니다.
+        </p>
+        <div class="btn_box">
+          <a href="#">
+            해외송금
+            <img src="/imges/home_arr.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<div class="con-min-width checkcard_box">
+  <div class="con">
+    <h3>프렌즈 체크카드,
+      <br>
+      내가 고르는 선택의 즐거움
+    </h3>
+    <p>프렌즈 디자인부터 멋스러운 블랙 컬러 카드까지 원하는 디자인과 기능을 선택할 수 있습니다.</p>
+
+    <div class="btn_box">
+      <a href="#">
+        카카오 프렌즈 체크카드
+        <img src="/imges/home_arr.png" alt="">
+      </a>
+    </div>
+    <div class="slider_box">
+      <div class="arrows">
+        <div class="btn_arrow_left"><img src="https://www.kakaobank.com/static/images/web/img-left.png" alt=""></div>
+        <div class="btn_arrow_right"><img src="https://www.kakaobank.com/static/images/web/img-right.png" alt=""></div>
+      </div>
+
+      <div class="slick">
+
+        <div class="item">
+          <div class="img-box"><img src="/images/card-1.png" alt=""></div>
+        </div>
+        <div class="item">
+          <div class="img-box"><img src="/images/card-2.png" alt=""></div>
+        </div>
+        <div class="item">
+          <div class="img-box"><img src="/images/card-3.png" alt=""></div>
+        </div>
+        <div class="item">
+          <div class="img-box"><img src="/images/card-4.png" alt=""></div>
+        </div>
+        <div class="item">
+          <div class="img-box"><img src="/images/card-5.png" alt=""></div>
+
+        <div><img src="/imges/card-1.png" alt=""></div>
+        <div class="center"><img src="/imges/card-2.png" alt=""></div>
+        <div><img src="/imges/card-3.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="itskill_box">
+  <div class="con">
+    <h3>IT 기술로 카카오뱅크를
+      <br>
+      만들어 갑니다.
+    </h3>
+
+    <div class="divider"></div>
+    <div class="txt_box">
+      <div class="bg_divider"></div>
+      <div class="img-box">
+        <img src="/imges/home_it.png" alt="">
+      </div>
+      <ul class="flex">
+        <li>
+          <strong>간결하고, 유려하게</strong>
+          <p>
+            작은 모바일 화면에 적합하도록
+            <br>
+            복잡함을 덜어낸
+            <br>
+            유려하고 친화적인 UX
+          </p>
+        </li>
+        <li>
+          <strong>간편한 인증, 철저한 보안</strong>
+          <p>
+            지문, 비밀번호로 간편한 인증
+            <br>
+            IT 기술의 강력한 보안 검증과
+            <br>
+            데이터 암호화
+          </p>
+        </li>
+        <li class="flex-grow-1">
+          <strong></strong>
+          <p></p>
+        </li>
+        <li>
+          <strong>Mobile First, One App</strong>
+          <p>
+            모바일에서 뱅킹이 더 쉽고 편리하게
+            <br>
+            여러 앱을 설치할 필요 없이
+            <br>
+            하나의 앱으로
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="con_min_width">
+  <div class="con">
+    <div class="box_1">
+      <div class="menu_box">
+        <ul>
+          <li class="not"><a href="">모바일뱅킹 서비스 이용약관</a></li>
+          <li><a href="">전자금융거래 기본약관</a></li>
+          <li><a href="" class="strong black">위치기반 서비스 이용약관</a></li>
+          <li><a href="" class="strong black">개인정보처리방침</a></li>
+          <li><a href="" class="strong black">전자민원접수</a></li>
+          <li><a href="">보호금융상품등록부</a></li>
+          <li><a href="">상품공시실</a></li>
+          <li><a href="">경영공시</a></li>
+          <li class="not2"><a href="">공지사항</a></li>
+          <br>
+          <li class="not"><a href="">전자서명인증업무준칙</a></li>
+          <li><a href="">카카오뱅크 인증서 서비스 이용약관</a></li>
+          <li><a href="" class="strong black">카카오뱅크 인증서 서비스 개인정보처리방침</a></li>
+        </ul>
+      </div>    
+    </div>
+    <div class="box_2">
+      <span class="txt_busi">(주)카카오뱅크∙윤호영∙사업자번호 375-88-00197</span>
+      <span class="txt_busi_tel">대표전화 1599-3333</span>
+      <span class="txt_tel">(해외 +82-2-6420-3333)</span>
+      <span class="info_copyright">Copyright © KakaoBank Corp. All rights reserved.</span>
+    </div>
+    <div class="box_3 flex flex-ai-c">
+      <div class="license_1">
+        <a href="#" class="flex flex-ai-c">
+          <img src="/imges/webaccessibility.png" alt="">
+          <span>웹 접근성 품질인증</span>
+        </a>
+    </div>
+      <div class="license_2">
+        <a href="#" class="flex flex-ai-c">
+          <img src="/imges/web_trust_seal.png" alt="">
+          <span>웹 트러스트 인증</span>
+        </a>
+    </div>
+
+    <div class="flex-grow-1">
+      <nav class="menu_box_2">
+        <ul class="flex">
+          <li>
+              <a href="#" class="block">
+                  <span class="block ico_sns ico_sns_facebook"></span>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="block">
+                  <span class="block ico_sns ico_sns_instagram"></span>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="block">
+                  <span class="block ico_sns ico_sns_youtube"></span>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="block">
+                  <span class="block ico_sns ico_sns_brunch"></span>
+              </a>
+          </li>
+      </ul>
+      </nav>
+    </div>
+   </div>
+  </div>
+</footer>
+ <style>
+
+  /* 노멀라이즈 */
+  body,ul,li{
+    margin:0;
+    padding: 0;
+    list-style: none;
+  }
+  a{
+    color:inherit;
+    text-decoration: none;
+  }
+  /* 라이브러리 */
+  .border-red{
+    border:5px solid red;
+  }
+  .border-blue{
+    border:5px solid blue;
+  }
+  .border-green{
+    border:5px solid green;
+  }
+  .border-gold{
+    border:5px solid gold;
+  }
+  .flex{
+    display: flex;
+  }
+  .flex-jc-c{
+    justify-content: center;
+  }
+.flex-ai-c{
+  align-items: center;
+}
+.flex-as-c{
+  align-self: center;
+}
+.flex-grow-1{
+  flex-grow: 1;
+}
+.block{
+  display: block;
+}
+.height-100p{
+  height: 100%;
+}
+.con{
+  margin-left:auto;
+  margin-right:auto;
+}
+.img-box>img{
+  width:100%;
+  display: block;
+}
+
+.relative{
+  position: relative;
+}
+
+.strong{
+  font-weight: bold;
+}
+
+.black{
+  color: #000;
+}
+
+/* 커스텀 */
+.con_min_width{
+  min-width: 1080px;
+}
+.con{
+  width:1080px;
+}
+
+.ico{
+  background-color:white;
+  width:24px;
+  height:24px;
+  display:inline-block;
+  background-image:url(https://www.kakaobank.com/static/images/web/img_kabang_220615.png)
+}
+
+/* 탑바 시작 */
+.top_bar{
+  height:80px;
+  width: 100%;
+  left:0;
+  background-color: white;
+  font-size: 15px;
+  top:0;
+  position: fixed;
+  border-bottom: 1px solid gray;
+  z-index: 100;
+}
+/* 로고 */
+.top_bar .logo_wrap>a{
+  width: 116px;
+}
+.top_bar .logo_wrap >a>img{
+  width: 100%;
+}
+/* 텍스트 */
+.top_bar .menu_box > ul > li > a{
+  padding: 0 24px;
+  position: relative;
+}
+.top_bar .menu_box  ul > li > a:hover{
+  text-decoration: underline;
+}
+.top_bar .menu_box > ul > li > a ::after{
+  content:"";
+  background-color: #000;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+.top_bar .menu_box > ul > li :hover >a::after{
+  display: block;
+}
+/* 메뉴박스-2차메뉴 */
+.top_bar .menu_box > ul > li > div{
+  width: 100%;
+  background-color:white ;
+  position: absolute;
+  left: 0;
+  top:100%;
+  display: none;
+  padding: 60px 0 60px 0;
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,0.12);
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.top_bar .menu_box > ul > li:hover > div{
+  display: block;
+}
+.top_bar .menu_box > ul> li  .menu_box-sec_menu > ul > li{
+width: calc(100% /6);
+}
+.top_bar .menu_box > ul> li:first-child .menu_box-sec_menu > ul > li{
+width: calc(100% /4);
+}
+.top_bar .menu_box > ul> li  .menu_box-sec_menu  ul > li > a{
+display: block;
+margin-bottom: 20px;
+text-align: center;
+font-size: 17px;
+}
+
+.top_bar .menu_box > ul> li  .menu_box-sec_menu  ul ul  li > a{
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.top_bar .menu_box  .menu_box-sec_menu >  ul  li > a[target="_blank"::after]{
+  content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(-https://www.kakaobank.com/static/images/web/svg_line_outlink.svg);
+    background-size: 12px 12px;
+    margin-left: -4px;
+    vertical-align: middle;
+    margin-left:5px;
+}
+
+/* 관련 사이트 */
+.top_bar .dropdown{
+  position: relative;
+}
+
+.top_bar .dropdown .dropBtn{
+  background: rgba(244, 244, 244, 0.8);
+    color: rgba(68, 68, 68, 1);
+    border: 1px solid rgba(229, 229, 229, 0.8);
+    padding: 0 14px 0 18px;
+    margin: 0 28px 0 14px;
+    cursor: pointer;
+    height: 40px;
+    font-size: 15px;
+border-radius: 40px;
+}
+.top_bar .dropdown .dropBtn .ico {
+  display: inline-block;
+  margin-left: 2px;
+}
+/* 이미지버전 */
+/* .top_bar .dropdown .dropBtn::after{
+  content: "";
+  display: inline-block;
+  margin-left: 10px;
+  width: 12px;
+  height: 12px;
+  background-size: 12px 12px;
+  /* background:url(/imges/home_arr.png) */
+ */
+
+.top_bar .dropdown .rotate::after{
+  transform: rotate(-180deg);
+  transition: transform .3s ease;
+}
+
+.top_bar .dropdown .dropdown_content{
+  position: absolute;
+  left:0;
+  top: 100%;
+  background-color: white;
+  box-shadow: 0 4px 12px 0 rgb(0,0,0,0.12);
+  overflow:hidden;
+  margin-top:30px;
+  width:240px;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition:all .1s linear;
+  opacity : 0;
+}
+
+.top_bar .is-active{
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.top_bar .dropdown .dropdown_content a{
+font-size: 13px;
+display: block;
+padding: 0 24px;
+line-height: 48px;
+}
+.top_bar .dropdown .dropdown_content a:hover{
+  text-decoration: underline;
+}
+
+.top_bar .dropdown .dropdown_content a::after{
+  content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(-https://www.kakaobank.com/static/images/web/svg_line_outlink.svg);
+    background-size: 12px 12px;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+/* 글로벌 로고 */
+.top_bar .global_logo{
+  width:20px;
+  display: inline-block;
+}
+.top_bar .global_logo > span > img{
+  width: 100%;
+  display: block;
+  opacity: 0.7;
+}
+.top_bar .global_logo:hover>span>img{
+  opacity: 0.3;
+}
+  /* 탑바 끝 */
+
+/* 메인 배너 시작 */
+.main_banner {
+  margin-top: 80px;
+  padding-top: 100px;
+}
+.main_banner img{
+  width: 1200px;
+  margin-left: 60px;
+}
+.main_banner .bg{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 720px;
+  z-index: -1;
+  background-color: #ffef6b;
+}
+/* 메인 배너 시작-text */
+.main_banner{
+  background-color: #ffef6b;
+  padding:100px;
+}
+.main_banner .text_box{
+  position: absolute;
+  top:136px;
+  left:-22px;
+}
+.main_banner  .text_box > h3 {
+  font-size: 49px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin:0;
+}
+.main_banner  .text_box > .tit_sub{
+  font-size: 16px;
+  line-height: 1.95;
+  opacity: .7;
+}
+.main_banner  .text_box > .btns{
+  margin-top:40px;
+}
+.main_banner  .text_box > .btns > li:first-child{
+  padding-right : 12px;
+}
+.main_banner  .text_box > .btns > li > a{
+  display: flex;
+  width: 178px;
+  height: 56px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 12px;
+  font-size: 16.2px;
+  font-weight: bold;
+  line-height: 56px;
+  color: #333;
+  background: #fff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+} 
+
+.main_banner > .text_box > .btns > .ico{
+  margin-right:10px;
+}
+
+.main_banner > .text_box > .btns > .ico-1{
+  background-position:-341px -292px;
+}
+
+.main_banner > .text_box > .btns > .ico-2{
+  background-position:-371px -292px;
+}
+.main_banner > .text_box > .btns > li:hover > a{
+  text-decoration: underline;
+}
+/* 메인 배너 끝 */
+
+/* 중간섹션 시작 */
+/* 공통섹션 시작 */
+.md_sec{
+  min-height: 500px;
+  display: flex;
+  margin-top: 10px;
+}
+
+.md_sec > div:first-child{
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.md_sec > div:last-child{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.md_divider{
+  height: 32px;
+  background-color: #fafafa;
+}
+
+.md_sec .img-box{
+  width: 473px;
+}
+
+.md_sec .txt_box h3{
+  font-size: 40px;
+  line-height: 1.3;
+  margin:0;
+}
+
+.md_sec .txt_box a{
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+  margin-top: 24px;
+}
+
+.md_sec .txt_box .btn_box{
+  margin-top: 35px;
+  display: flex;
+}
+
+.md_sec .txt_box .btn_box a{
+  background-color: #f6f6f6;
+  width: 258px;
+  height: 56px;
+  font-size: 16px;
+  line-height: 56px;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.md_sec .txt_box .btn_box a img{
+  width: 6px;
+  height: 9px;
+  margin: 0.2px 0 0 8px;
+}
+
+/* 공통섹션  끝 */
+
+/* 섹션 1 시작 */
+.md_sec_1 > div:first-child > * {
+  margin-left:40px;
+}
+
+.md_sec_1 > div:last-child > * {
+  margin-left:90px;
+}
+
+.md_sec_1 .img-box{
+  width:473px;
+}
+
+/* 섹션 1 끝 */
+
+/* 섹션 2 시작 */
+.md_sec_2 > div:first-child > * {
+  margin-left:70px;
+}
+
+.md_sec_2 > div:last-child > * {
+  margin-left:120px;
+}
+
+.md_sec_2 .img-box{
+  width: 409px;
+}
+
+.md_sec_2 .img-box>img{
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;
+}
+.md_sec_2 .img-box.active >img{
+  opacity: 1;
+  transform: translateX(0);
+}
+.md_sec_2 .txt_box > .btn_box > a{
+  width: 158px;
+}
+
+.md_sec_2 .txt_box > .btn_box > a:first-child{
+  margin-left: 6px;
+}
+
+.md_sec_2 .txt_box .img_box_1 {
+  width: 440px;
+  margin-top: 60px;
+}
+
+.md_sec_2 .txt_box .img_box_1 > img{
+  display: block;
+  width: 100%;
+}
+
+/* 섹션 2 끝 */
+
+/* 섹션 3 시작 */
+.md_sec_3 > div:first-child > * {
+  margin-left: 57px;
+}
+
+.md_sec_3 > div:last-child > * {
+  margin-left:90px;
+}
+
+.md_sec_3 .img-box{
+  width:459px;
+}
+
+/* 섹션 3 끝 */
+
+/* 섹션 4 시작 */
+.md_sec_4 > div:first-child > * {
+  margin-left:130px;
+}
+
+.md_sec_4 > div:last-child > * {
+  margin-left:40px;
+}
+
+.md_sec_4 .img-box{
+  width:492px;
+}
+/* 섹션 4 끝 */
+
+/* 섹션 5 시작 */
+.md_sec_5 > div:first-child > * {
+  margin-left:75px;
+}
+
+.md_sec_5 > div:last-child > * {
+  margin-left:90px;
+}
+.md_sec_5_wrap {
+ height: 90px;
+ background: #fff url(/images/home_map.png) no-repeat -12% 50%;
+}
+
+.md_sec_5 .img-box {
+  width: 408px;
+ }
+ .md_sec_5 .img-box > img {
+  transform: translateY(20%);
+   opacity: 0;
+  transition: all, transform 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s, opacity 1.4s cubic-bezier(0.6, 0.2, 0.1, 1) 0.5s;
+}
+
+.md_sec_5 .img-box.active > img {
+   transform: translateY(0);
+   opacity: 1;
+}
+/* 섹션 5 끝 */
+
+/* 중간섹션 끝 */
+
+/* 체크카드 시작 */
+.checkcard_box{
+  padding: 150px;
+}
+
+.checkcard_box  h3 {
+  font-size: 40px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.checkcard_box  p {
+  font-size: 15px;
+  line-height:1.7;
+  margin-top: 24px;
+  color: #666;
+  text-align: center;
+}
+
+.checkcard_box  .btn_box {
+  display: flex;
+  justify-content: center;
+}
+
+.checkcard_box  .btn_box > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 258px;
+  height: 56px;
+  line-height: 56px;
+  color: #666;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.checkcard_box  .btn_box:hover > a{
+  text-decoration: underline;
+}
+
+.checkcard_box  .btn_box > a > img{
+  width: 6px;
+  height: 6px;
+  margin-left: 8px;
+  margin-top: 1px;
+  display: block;
+}
+
+/* 슬라이드시작 */
+.checkcard_box .slider_box {
+ position: relative;
+ width: 660px;
+ margin: 80px auto 0 auto;
+}
+
+
+.checkcard_box .slider_box .slick .item > .img-box {
+padding-top: 30px;
+padding-bottom: 30px;
+}
+
+.checkcard_box .slider_box .slick .item.slick-center {
+transform: scale(1.17);
+}
+
+.checkcard_box .slider_box > .arrows > div {
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ cursor: pointer;
+ right: calc(100% + 100px);
+}
+
+.checkcard_box .slider_box > .arrows > div:last-child {
+ left: calc(100% + 100px);
+ right: auto;
+}
+
+.checkcard_box .slider_box > .arrows > div:active {
+ transform: translateY(-45%);
+}
+/* 슬라이드 끝 */
+/* 체크카드 끝 */
+
+.itskill_box{
+  padding-top: 160px;
+  background-color: #f9f9f9;
+  padding-bottom: 230px;
+}
+
+.itskill_box > .con > h3{
+  font-size: 40px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.itskill_box >.con > .divider{
+  width: 100px;
+  height: 2px;
+  background-color: #000;
+  margin: 50px auto 140px;
+}
+
+.itskill_box > .con > .txt_box > .img-box{
+  position: relative;
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.itskill_box > .con > .txt_box > .bg_divider {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 0;
+  background-color: #eee;
+  transform: translateY(135px);
+}
+
+.txt_box > ul {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.txt_box > ul > li {
+  text-align: center;
+  width: 255px;
+  height: 210px;
+}
+
+.txt_box > ul > li > strong{
+  margin: 45px 0 17px;
+  font-size: 18px;
+  display: block;
+}
+
+.txt_box > ul > li > p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #666;
+}
+/* IT 박스 끝 */
+
+footer{
+  background-color: #eee;
+}
+
+footer .box_1{
+  padding: 20px 0 16px;
+  color: #666;
+  font-size: 11px;
+}
+
+footer  .box_1 > .menu_box > ul > li {
+  display: inline-block;
+  padding: 6px 12px;
+  position: relative;
+}
+
+footer .box_1 > .menu_box > ul > li:not(.not)::after{
+  content: "";
+  background-color: #d8d8d8;
+  width: 1px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -1px;
+}
+
+footer > .box_1 > .menu_box > ul > li.not{
+  padding-left: 0px;
+}
+
+footer > .box_1 > .menu_box > ul > li.not2{
+  padding-right: 0px;
+}
+
+footer > .box_1 > .menu_box > ul > li :hover{
+  text-decoration: underline;
+}
+
+footer .box_2{
+  color: #888;
+}
+
+footer .txt_busi_tel{
+  color: #000;
+  padding: 0 6px;
+}
+
+footer .info_copyright{
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+footer .box_3{
+  color: #666;
+  padding-top: 12px;
+  padding-bottom: 18px;
+}
+
+footer .box_3 .license_1 img{
+  width: 46px;
+}
+
+footer .box_3 .license_2 img{
+  width: 42px;
+}
+
+footer .box_3 .license_2 {
+  margin-left: 20px;
+}
+
+footer .box_3 .license_1 span,
+footer .box_3 .license_2 span {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: bold;
+} 
+
+footer .box_3 .menu_box_2 ul > li {
+
+}
+
+footer .box_3 .menu_box_2 ul > li > a {
+  width: 24px;
+  height: 24px;
+}
+
+footer .box_3 > .menu_box_2 .ico_sns {
+  height: 100%;
+  background-image: url(/imges/ico_sns.png);
+}
+
+footer .box_3 .menu_box_2 ul > li > .ico_sns_facebook {
+  background-position: 0 -90px;
+}
+
+
+footer .box_3 .menu_box_2 ul > li > .ico_sns_instagram {
+  background-position: -191px -138px;
+}
+
+
+footer .box_3 .menu_box_2 ul > li > .ico_sns_youtube {
+  background-position: -90px -90px;
+}
+
+footer .box_3 .menu_box_2 ul > li > .ico_sns_brunch {
+  background-position: -217px -138px;
+}
+
+
+/* footer 끝 */
+  </style>
+
+  <script>
+     $('.dropBtn').click(function() {
+        var ico = $('.ico');
+
+            if (.dropdownContent.hasClass('is-active') ) {
+              .dropdownContent.removeClass('is-active');
+                ico.removeClass('rotate');
+            } 
+            else {
+                .dropdownContent.addClass('is-active');
+                $(this).addClass('rotate');
+            }
+        });
+        $ (window).click(function(event){
+          if (!$(event.target).closest(".dropBtn").length){
+            $(".dropdown_content").removeClass('is-active');
+            $("dropBtn").removeClass('rotate');
+          }
+        });
+
+/* 발견되면 활성화시키는 라이브러리 시작 */
+function ActiveOnVisible__init() {
+  $('.active-on-visible').each(function(index, node) {
+    var $node = $(node);
+
+    var onFuncName = $node.attr('data-active-on-visible-on-func-name');
+    var offFuncName = $node.attr('data-active-on-visible-off-func-name');
+
+    $node.data('data-active-on-visible-on-func-name', onFuncName);
+    $node.data('data-active-on-visible-off-func-name', offFuncName);
+  });
+
+  $(window).resize(_.debounce(ActiveOnVisible__initOffset, 500));
+  ActiveOnVisible__initOffset();
+
+  $(window).scroll(_.debounce(ActiveOnVisible__checkAndActive, 50));
+  ActiveOnVisible__checkAndActive();
+}
+
+function ActiveOnVisible__initOffset() {
+  var windowHeight = $(window).height();
+
+  $('.active-on-visible:not(.actived)').each(function(index, node) {
+    var $node = $(node);
+
+    var offsetTop = $node.offset().top;
+
+    var matrix = $node.css('transform').replace(/[^0-9\-.,]/g, '').split(',')
+    var translateX = matrix[12] || matrix[4];
+    var translateY = matrix[13] || matrix[5];
+
+    if ( translateY ) {
+      offsetTop -= translateY;
+    }
+
+    $node.attr('data-active-on-visible-offsetTop', offsetTop);
+    $node.data('data-active-on-visible-offsetTop', offsetTop);
+
+    if ( !$node.attr('data-active-on-visible-diff-y') ) {
+      $node.attr('data-active-on-visible-diff-y', '0');
+    }
+
+    if ( !$node.attr('data-active-on-visible-delay') ) {
+      $node.attr('data-active-on-visible-delay', '0');
+    }
+
+    var diffY = $node.attr('data-active-on-visible-diff-y');
+    var delay = $node.attr('data-active-on-visible-delay');
+
+    if ( diffY.substr(-2, 2) == 'vh' ) {
+      diffY = parseInt(diffY);
+
+      diffY = windowHeight * (diffY / 100);
+    }
+    else if ( diffY.substr(-1, 1) == '%' ) {
+      diffY = parseInt(diffY);
+
+      diffY = $node.height() * (diffY / 100);
+    }
+    else {
+      diffY = parseInt(diffY);
+    }
+
+    $node.attr('data-active-on-visible-diff-y-real', diffY);
+    $node.data('data-active-on-visible-diff-y', diffY);
+    $node.data('data-active-on-visible-delay', delay);
+  });
+
+  ActiveOnVisible__checkAndActive();
+}
+
+function ActiveOnVisible__checkAndActive() {
+  $('.active-on-visible:not(.actived)').each(function(index, node) {
+    var $node = $(node);
+
+    var offsetTop = $node.data('data-active-on-visible-offsetTop') * 1;
+    var diffY = parseInt($node.data('data-active-on-visible-diff-y'));
+    var delay = parseInt($node.data('data-active-on-visible-delay'));
+
+    var onFuncName = $node.data('data-active-on-visible-on-func-name');
+    var offFuncName = $node.data('data-active-on-visible-off-func-name');
+
+    var scrollTop = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var nodeHeight = $node.height();
+
+    if ( scrollTop + windowHeight + diffY > offsetTop ) {
+      setTimeout(function() {
+        if ( $node.hasClass('active') == false ) {
+          $node.addClass('active');
+
+          if ( $node.hasClass('can-active-once') ) {
+            $node.addClass('actived');
+          }
+
+          if ( window[onFuncName] ) {
+            window[onFuncName]($node);
+          }
+        }
+      }, delay);
+    }
+    else {
+      if ( $node.hasClass('active') ) {
+        $node.removeClass('active');
+
+        if ( window[offFuncName] ) {
+          window[offFuncName]($node);
+        }
+      }
+    }
+  });
+}
+
+$(function() {
+  ActiveOnVisible__init();
+})
+/* 발견되면 활성화시키는 라이브러리 끝 */
+
+function SliderBox1__init() {
+  $('.slide-box > .slick').slick({
+    dots:false,
+    autoplay: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode:true,
+    centerPadding:0,
+    // arrows:true;
+    prevArrow:".slide_box > .arrows > .btn_arrow_left",
+    prevArrow:".slide_box > .arrows > .btn_arrow_right",
+  });
+}
+
+SliderBox1__init();
+  </script>
 </body>
 </html>
